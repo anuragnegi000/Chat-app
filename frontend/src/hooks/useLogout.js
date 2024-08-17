@@ -1,5 +1,6 @@
 import { set } from "mongoose";
 import { useState } from "react";
+import { useAuthContext } from "../Context/AuthContext";
 
 const useLogout = () => {
   const [loading, setLoading] = useState(false);

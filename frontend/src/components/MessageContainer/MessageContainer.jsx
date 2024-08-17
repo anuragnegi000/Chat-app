@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 import MessageArea from "./MessageArea";
 
 const MessageContainer = () => {
-    const nochatSelected=true; 
+    const nochatSelected=false; 
   return (
     <div className="flex flex-col w-full h-screen"> {/* Parent element with fixed height */}
         {nochatSelected ? (

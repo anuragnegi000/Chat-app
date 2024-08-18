@@ -8,7 +8,7 @@ const useGetConversations = () => {
     const fetchConversations = async () => {
       console.log("Starting request to fetch conversations...");
       try {
-        const response = await fetch('http://localhost:5000/api/users')
+        const response = await fetch('/api/users')
         const data = await response.json();
 
         // Check if the response is an array or an object with users array

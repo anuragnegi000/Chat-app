@@ -5,7 +5,7 @@ import Conversations from './Conversations'
 
 const Sidebar = () => {
   return (
-    <div className='w-1/2 h-full bg-gray-100 flex flex-col justify-between'>
+    <div className='w-1/2 h-screen bg-gray-100 flex flex-col justify-between'>
         <Searchinput/>
          <OptionList/>
          <Conversations/>

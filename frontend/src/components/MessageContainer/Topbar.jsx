@@ -1,8 +1,10 @@
 import { EllipsisVertical, LogOut } from "lucide-react";
 import React from "react";
 import useLogout from "../../hooks/useLogout";
+import useConversation from '../../zustand/useConversation'
 
 const Topbar = () => {
+  const {selectedConversation}=useConversation();
   const {loading,logout}=useLogout();
   return (
     <div className="p-[0.6rem] bg-gray-100 flex">
@@ -16,7 +18,7 @@ const Topbar = () => {
       </div>
       <div className="flex justify-between items-center w-full">
         <div className="ml-2">
-          <p className=" font-semibold text-lg">Anurag</p>
+          <p className=" font-semibold text-lg">{selectedConversation.fullName}</p>
           <p>typing...</p>
         </div>
         <div className="flex items-center gap-2">

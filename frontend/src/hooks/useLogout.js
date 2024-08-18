@@ -1,12 +1,13 @@
 import { set } from "mongoose";
 import { useState } from "react";
+import { useAuthContext } from "../Context/AuthContext";
 
 const useLogout = () => {
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext();
   const logout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/logout", {
+      const response = await fetch("/api/auth/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
